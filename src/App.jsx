@@ -28,4 +28,11 @@ export default function App() {
   console.log(quadrato(3)); //Output: 9
 
 
+  //-------------------------------------------------------------------------------- SNACK 3
+  const sottrazione = (num1, num2) => num1 - num2;
+  const divisione = (num1, num2) => num1 / num2;
+  const eseguiOperazione = (num1, num2, operazione) => operazione(num1, num2);
+  console.log("sottrazione: " + eseguiOperazione(6, 2, sottrazione)); //Output: 2
+  console.log("divisione: " + eseguiOperazione(6, 2, divisione)); //Output: 3
+
 };
