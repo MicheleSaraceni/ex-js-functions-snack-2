@@ -1,8 +1,7 @@
 
 export default function App() {
 
-  //------------------------------------------------------------ SNACK 1//
-
+  //-------------------------------------------------------------------------------- SNACK 1
   function somma(num1, num2) {
     const result = num1 + num2;
     return result;
@@ -24,6 +23,9 @@ export default function App() {
   console.log("Arrow function - Resultato: " + somma3(3, 4)); //Output: 7
 
 
+  //-------------------------------------------------------------------------------- SNACK 2
+  const quadrato = (num) => num * num;
+  console.log(quadrato(3)); //Output: 9
+
+
 };
-
-
