@@ -50,9 +50,25 @@ export default function App() {
     console.log("Stampa dopo " + sec + " secondo"); //Output: "Stampa ogni secondo
     sec++;
   }, 1000);
-  setTimeout(() => { clearInterval(stampaOgniSecondo); console.log("Stop contasecondi"); }, 10000); //Interrompo il loop della funzione setInterval dopo 10 secondi
+  setTimeout(() => {
+    clearInterval(stampaOgniSecondo);
+    console.log("Stop contasecondi");
+  }, 10000); //Interrompo il loop della funzione setInterval dopo 10 secondi
 
 
+  //-------------------------------------------------------------------------------- SNACK 6
+  const creaContatoreAutomatico = (ms) => {
+    let incrementi = 1;
+    let addIntervall = setInterval(() => {
+      console.log("Incremento n°" + incrementi);
+      incrementi++;
+    }, ms); //Incremento ogni 3 secondi
+    setTimeout(() => {
+      clearInterval(addIntervall);
+      console.log("Stop incrementi");
+    }, 30000); //Interrompo il loop della funzione setInterval dopo 30 secondi
+  };
+  creaContatoreAutomatico(3000);
 
 
 }
