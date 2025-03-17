@@ -57,18 +57,30 @@ export default function App() {
 
 
   //-------------------------------------------------------------------------------- SNACK 6
-  const creaContatoreAutomatico = (ms) => {
+  function creaContatoreAutomatico(ms) {
     let incrementi = 1;
-    let addIntervall = setInterval(() => {
+    let IntervalID = setInterval(() => {
       console.log("Incremento n°" + incrementi);
       incrementi++;
     }, ms); //Incremento ogni 3 secondi
     setTimeout(() => {
-      clearInterval(addIntervall);
+      clearInterval(IntervalID);
       console.log("Stop incrementi");
     }, 30000); //Interrompo il loop della funzione setInterval dopo 30 secondi
   };
   creaContatoreAutomatico(3000);
 
+
+  //-------------------------------------------------------------------------------- SNACK 7
+  function eseguiEferma(messaggio, intervallo, durata) {
+    const IntervalID = setInterval(() => {
+      console.log(messaggio);
+    }, intervallo); //Output: "Questo è il messaggio" ogni secondo
+    setTimeout(() => {
+      clearInterval(IntervalID);
+      console.log("eseguiEferma terminata!");
+    }, durata); //Interrompo il loop della funzione setInterval dopo 5 secondi
+  }
+  eseguiEferma("Questo è il messaggio", 1000, 5000); //Output: "Questo è il messaggio" ogni secondo per 5 secondi
 
 }
