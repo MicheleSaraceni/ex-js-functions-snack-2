@@ -35,4 +35,12 @@ export default function App() {
   console.log("sottrazione: " + eseguiOperazione(6, 2, sottrazione)); //Output: 2
   console.log("divisione: " + eseguiOperazione(6, 2, divisione)); //Output: 3
 
-};
+
+  //-------------------------------------------------------------------------------- SNACK 4
+  function creaTimer(ms) {
+    return setTimeout(() => console.log("Tempo scaduto!"), ms)
+  }
+  creaTimer(2000); //Output: "Tempo scaduto!" dopo 2 secondi
+
+
+}
