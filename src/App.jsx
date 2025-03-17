@@ -43,4 +43,16 @@ export default function App() {
   creaTimer(2000); //Output: "Tempo scaduto!" dopo 2 secondi
 
 
+
+  //-------------------------------------------------------------------------------- SNACK 5
+  let sec = 1;
+  const stampaOgniSecondo = setInterval(() => {
+    console.log("Stampa dopo " + sec + " secondo"); //Output: "Stampa ogni secondo
+    sec++;
+  }, 1000);
+  setTimeout(() => { clearInterval(stampaOgniSecondo); console.log("Stop contasecondi"); }, 10000); //Interrompo il loop della funzione setInterval dopo 10 secondi
+
+
+
+
 }
